@@ -9,15 +9,16 @@
 
 	<div class="wrapper">
 
-		<div><h1>Test Title</h1></div>
+		<!-- <div><h1>Ivan's Blog</h1></div> -->
 
 		<div class="info">			
-		
+			<div class="info-introduction">Hi, my name is Ivan. This is my blog...</div>
+			<div class="info-social">Find me on <a href="#">Github</a> and <a href="#">Twitter</a></div>
 		</div>
 
 		<div class="post-list">
 			
-			<div class="post-year"></div><h3>2022</h3>
+			<div class="post-year">2022</div>
 			<div class="post-single">
 				
 				<div class="post-date">20 Nov</div>
@@ -32,6 +33,13 @@
 
 			</div>
 
+			<div class="post-single">
+				
+				<div class="post-date">21 Nov</div>
+				<div class="post-link"><a href="/test.html">The longest title that has every been writen for test purposes. It just keep going on and on and on and on and on and on and on ....</a></div>
+
+			</div>
+
 		</div>
 
 	</div>
@@ -42,11 +50,16 @@
 
 		.wrapper{ margin: 0 auto; max-width: 730px; padding: 10px; display: flex; flex-direction: column; justify-content: flex-start;}
 
+		.info{ font-size: 22px; }
+
 		.post-list { display: flex; flex-direction: column; }
-		.post-single{ display: inline-flex; font-size: 20px;}
-		.post-date, .post-link{ padding:5px; }
+		.post-year, h3{ font-size: 25px; font-weight: bold; margin: 20px 0;} 
+		.post-single{ display: inline-flex; align-items: center;}
+		.post-date, .post-link{ padding:10px 5px; }
+		.post-date{ width:10%; }
+		.post-link { width: 90%; margin-left: 25px; font-size: 20px;}
 
-
+		a{ color: blue; text-decoration: none; font-weight: bold; }
 
 	</style>
 
