@@ -9,19 +9,26 @@
 
 	<div class="wrapper">
 
-		<h1>Test Title</h1>
+		<div><h1>Test Title</h1></div>
 
 		<div class="info">			
 		
 		</div>
 
-		<div class="posts-wrapper">
+		<div class="post-list">
 			
-			<h3>2022</h3>
-			<div class="single-post">
+			<div class="post-year"></div><h3>2022</h3>
+			<div class="post-single">
 				
-				<span>20.11.2022</span>
-				<a href="/test.html">Test Post</a>
+				<div class="post-date">20 Nov</div>
+				<div class="post-link"><a href="/test.html">Test Post</a></div>
+
+			</div>
+
+			<div class="post-single">
+				
+				<div class="post-date">21 Nov</div>
+				<div class="post-link"><a href="/test.html">Another Test Post</a></div>
 
 			</div>
 
@@ -31,7 +38,15 @@
 
 	<style type="text/css">
 		
-		.wrapper{ margin: 0 auto; max-width: 730px; }
+		body{ font-family: sans-serif; } 
+
+		.wrapper{ margin: 0 auto; max-width: 730px; padding: 10px; display: flex; flex-direction: column; justify-content: flex-start;}
+
+		.post-list { display: flex; flex-direction: column; }
+		.post-single{ display: inline-flex; font-size: 20px;}
+		.post-date, .post-link{ padding:5px; }
+
+
 
 	</style>
 
