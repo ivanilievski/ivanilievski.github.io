@@ -33,15 +33,39 @@ new_list = [expression for variable in original_list if condition]
 
 Ok. SO enough about theory, let's put our knowledge into practice. Writing your first list comprehension is very easy but to appriciate what list comprehension does for us we will write two versions to accomplish the same thing. One versions with loops and functions and one with list comprehension.
 
+
 ![Code Snippet 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-1.png)
+
+
+In the first example we initializes an empty list called **number_list**. Then the for loop is created using the function **range()** function. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop the current number is added to the empthy list.
+
+Ok now we will use lis comprhension to create a list of numbers from 0 to 4. We iterate over a sequence of numbers as before. And then we add each number to the list now called **list_of_numbers**.
+
+So you can start to get, the benefits of using list comprehensions. We did not use **append** methid and yet the numbers were pushed to the new list.
+
 
 ![Code Snippet 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-2.png)
 
+
+But we can do way more than just single number in the expression. In the second example we are calculating the square of 10 numbers in the list named **old_number_list**, so we write a simple calculation in the expression using the ** operator. 
+
+
 ![Code Snippet 3](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-3.png)
+
+
+The third example is similar to the second except that we use the optional condition so we are creating list of squared numbers but only even numbers. 
+
 
 ![Code Snippet 4](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-4.png)
 
+
+
+
+
 ![Code Snippet 5](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-5.png)
+
+
+As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
 
 ## Python Comprehension can be also used for sets and dictionaries
 
