@@ -1,0 +1,54 @@
+<style type="text/css">
+	body { margin: 0 auto; max-width: 730px; padding: 10px;}
+	p{ font-family: sans-serif; font-size: 20px; }
+</style>
+
+<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
+
+[<-- Home](https://ivanilievski.github.io)
+
+# Python List Comprehension
+
+List Comprehension is a powerful feature of Python for creating new lists based on exsisting lists in more expressive way. It can help you write code that is easier to read and manitain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.
+
+List comprehension is based on a simple syntax that consists of three parts:
+
+	1. an expression
+	2. a variable
+	3. a list 
+
+```
+new_list = [expression for variable in original_list]
+```
+
+The **expression** defines the operation to be performed on each element of the list, the **variable** represents the current element being operated on, and the **list** is the original list that is being transformed.
+
+That beaing said there is an optional forth part that can be extremly useful when we want to filter elements. We use **condition** to decide which elements to be included in the new list. If condition is not used, all elements will be included. 
+
+```
+new_list = [expression for variable in original_list if condition]
+```
+
+## List Comprehension in practice
+
+Ok. SO enough about theory, let's put our knowledge into practice. Writing your first list comprehension is very easy but to appriciate what list comprehension does for us we will write two versions to accomplish the same thing. One versions with loops and functions and one with list comprehension.
+
+![Code Snippet 1]()
+
+![Code Snippet 2]()
+
+![Code Snippet 3]()
+
+![Code Snippet 4]()
+
+![Code Snippet 5]()
+
+## When to use and when not to use list comprehension
+
+## How to measure which one is faster
+
+## Conclusion
+
+
+All the code snippets are screenshots but you can find the code here. It's recomended that you type the code while reading the tutorial.
+
