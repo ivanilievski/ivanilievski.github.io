@@ -46,7 +46,7 @@ Ok. So enough about theory, let's put our knowledge into practice. Writing your 
 ![Code Snippet 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-1.png)
 
 
-In the first example, we initialize an empty list called **number_list**. Then the for loop is created using the function **range()** function. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.
+In the first example, we initialize an empty list called **number_list**. Then the for loop is created using the function **range()**. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.
 
 Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:
 
@@ -63,12 +63,11 @@ Rather than creating an empty list and adding each element to the end, you simpl
 
 
 But we can do way more than just a single number in the expression. In the second example, we are calculating the square of 10 numbers in the list named **old_number_list**, so we write a simple calculation in the expression using the ** operator. The rest of the code is concise and simple.
+
 Again we can recognize the three parts:
 
-Again we can regognise the three parts:
-
 1. number ** 2  is the **expression**. Find the square of the number.
-2. **variable** again is **a number**. No, you get that expression and variable are different in the first example they were the same. But usually, they are not.
+2. **variable** again is **a number**. Now, you get that expression and variable are different in the first example they were the same. But usually, they are not.
 3. We iterate over the **list** named **old_number_list** to find the square of each element in the list.
 
 
@@ -95,7 +94,7 @@ Nothing changed we still have the same organization:
 
 
 As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
-we have a list of lists, with each inner list representing a row in the matrix by the name of nseted_list.
+we have a list of lists, with each inner list representing a row in the matrix by the name of **nseted_list**.
 
 The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.
 
@@ -146,7 +145,7 @@ Python has provided us with a useful built-in Python module for measuring the ex
 ![code time measuring 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-1.png)
 
 
-In the last example, I have provided we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.
+In the last example, we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.
 
 Code execution leaderboard:
 
@@ -165,7 +164,7 @@ Let's test it out. Let's test it 100000000 million times and see the result.
 
 In the second example, we put some iron in the oven. Just kidding. After the execution is done we can see that list comprehension is faster than a map and for loops.
 
-To address the elephant in the room. Yes, Generator expressions are the fastest but this is not a tutorial about them so for now as one wise man once said just don't worry about generator expressions.
+To address the elephant in the room. Yes, Generator expressions are the fastest but this is not a tutorial about them so for now as one wise man once said just don't worry about generator expressions. For now...
 
 Rule of thumb if you work with huge datasets or on a mobile device with less power then just go with a generator expression.
 
