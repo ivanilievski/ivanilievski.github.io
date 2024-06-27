@@ -1,158 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post Template</title>
+</head>
+<body>
 
-# Python List Comprehension
+	<div class="container">
 
-List Comprehension is a powerful feature of Python for creating new lists based on existing lists in a more expressive way. It can help you write code that is easier to read and maintain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.
+		<!-- START MENU -->
+		<div class="header">
+			<span>
+				<a href="https://ivanilievski.github.io/">Articles</a>
+			</span> |
+			<span>
+				<a target="_blank" href="https://twitter.com/IvanIlievski_">Twitter</a>
+			</span> | 
+			<span>
+				<a target="_blank" href="https://indiestartuplist.com/">IndieStartupList</a>
+			</span>
+		</div>
+		<!-- END MENU -->
 
-List comprehension is based on a simple syntax that consists of three parts:
 
-1. an expression
-2. a variable
-3. a list 
+		<!-- START CONTENT -->
+		<div class="content">
 
-```
-new_list = [expression for variable in original_list]
-```
+			<h2>Test Title</h2>
 
-The **expression** defines the operation to be performed on each element of the list, the **variable** represents the current element being operated on, and the **list** is the original list that is being transformed.
-That being said there is an optional fourth part that can be extremely useful when we want to filter elements. We use **conditions** to decide which elements to be included in the new list. If the condition is not used, all elements will be included.
+			<p>Test New Paragraph...</p>
 
-```
-new_list = [expression for variable in original_list if condition]
-```
+			
+			# Python List Comprehension
 
-## List Comprehension in practice
+			List Comprehension is a powerful feature of Python for creating new lists based on existing lists in a more expressive way. It can help you write code that is easier to read and maintain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.
 
-Ok. So enough about theory, let's put our knowledge into practice. Writing your first list comprehension is very easy but to appreciate what list comprehension does for us we will write two versions to accomplish the same thing. One version with loops and functions and one with a list comprehension.
+			List comprehension is based on a simple syntax that consists of three parts:
 
+			1. an expression
+			2. a variable
+			3. a list 
 
-![Code Snippet 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-1.png)
+			```
+			new_list = [expression for variable in original_list]
+			```
 
+			The **expression** defines the operation to be performed on each element of the list, the **variable** represents the current element being operated on, and the **list** is the original list that is being transformed.
+			That being said there is an optional fourth part that can be extremely useful when we want to filter elements. We use **conditions** to decide which elements to be included in the new list. If the condition is not used, all elements will be included.
 
-In the first example, we initialize an empty list called **number_list**. Then the for loop is created using the function **range()**. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.
+			```
+			new_list = [expression for variable in original_list if condition]
+			```
 
-Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:
+			## List Comprehension in practice
 
-1. **expression**. In this case, we just have **a number** but it can have more complex expressions as we will see later.
+			Ok. So enough about theory, let's put our knowledge into practice. Writing your first list comprehension is very easy but to appreciate what list comprehension does for us we will write two versions to accomplish the same thing. One version with loops and functions and one with a list comprehension.
 
-2. **the variable** is **number**. I know is a little bit confusing but in the next example, it will be much more clear.
 
-3. We can see that the third part is not **list** as we specified earlier. But we just generate a sequence of numbers we use to make our list. Yes, so the third part of the list comprehension can be many different things. Like list, set, sequence, generator, etc.
+			![Code Snippet 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-1.png)
 
-Rather than creating an empty list and adding each element to the end, you simply define the list and its contents at the same time. One of the many benefits of using list comprehensions. We did not use **the append** method and yet the numbers were pushed to the new list.
 
+			In the first example, we initialize an empty list called **number_list**. Then the for loop is created using the function **range()**. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.
 
-![Code Snippet 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-2.png)
+			Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:
 
+			1. **expression**. In this case, we just have **a number** but it can have more complex expressions as we will see later.
 
-But we can do way more than just a single number in the expression. In the second example, we are calculating the square of 10 numbers in the list named **old_number_list**, so we write a simple calculation in the expression using the ** operator. The rest of the code is concise and simple.
+			2. **the variable** is **number**. I know is a little bit confusing but in the next example, it will be much more clear.
 
-Again we can recognize the three parts:
+			3. We can see that the third part is not **list** as we specified earlier. But we just generate a sequence of numbers we use to make our list. Yes, so the third part of the list comprehension can be many different things. Like list, set, sequence, generator, etc.
 
-1. number ** 2  is the **expression**. Find the square of the number.
-2. **variable** again is **a number**. Now, you get that expression and variable are different in the first example they were the same. But usually, they are not.
-3. We iterate over the **list** named **old_number_list** to find the square of each element in the list.
+			Rather than creating an empty list and adding each element to the end, you simply define the list and its contents at the same time. One of the many benefits of using list comprehensions. We did not use **the append** method and yet the numbers were pushed to the new list.
 
 
-![Code Snippet 3](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-3.png)
+			![Code Snippet 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-2.png)
 
 
-The third example is similar to the second except that we use the optional condition so we are creating a list of squared numbers but only even numbers.
-This list comprehension includes three elements plus the fort part or the **condition**, in this case, is **if number % 2 == 0** and we use it to filter the odd numbers and only add the even numbers to the list called **even_squared_numbers**.
+			But we can do way more than just a single number in the expression. In the second example, we are calculating the square of 10 numbers in the list named **old_number_list**, so we write a simple calculation in the expression using the ** operator. The rest of the code is concise and simple.
 
+			Again we can recognize the three parts:
 
-![Code Snippet 4](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-4.png)
+			1. number ** 2  is the **expression**. Find the square of the number.
+			2. **variable** again is **a number**. Now, you get that expression and variable are different in the first example they were the same. But usually, they are not.
+			3. We iterate over the **list** named **old_number_list** to find the square of each element in the list.
 
 
-Let's try list comprehension with strings. Some little kid messed with our list and now our list of capital cities is not properly written. We don't have time to rewrite each capital city from scratch so we used list comprehension to capitalize our capital city names.
+			![Code Snippet 3](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-3.png)
 
-Nothing changed we still have the same organization:
 
-1. **expression** is **city.capitalize()**
-2. **variable** is **city**
-3. The **list** we iterate over is **incorect_capital_cities**
+			The third example is similar to the second except that we use the optional condition so we are creating a list of squared numbers but only even numbers.
+			This list comprehension includes three elements plus the fort part or the **condition**, in this case, is **if number % 2 == 0** and we use it to filter the odd numbers and only add the even numbers to the list called **even_squared_numbers**.
 
 
-![Code Snippet 5](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-5.png)
+			![Code Snippet 4](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-4.png)
 
 
-As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
-we have a list of lists, with each inner list representing a row in the matrix by the name of **nseted_list**.
+			Let's try list comprehension with strings. Some little kid messed with our list and now our list of capital cities is not properly written. We don't have time to rewrite each capital city from scratch so we used list comprehension to capitalize our capital city names.
 
-The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.
+			Nothing changed we still have the same organization:
 
-- number ** 2 We find the square of the number
-- **if sum(row) > 10** check if the sum of numbers in a row is greater than 10.
-- **if number % 2 == 0** Check if the number is even.
+			1. **expression** is **city.capitalize()**
+			2. **variable** is **city**
+			3. The **list** we iterate over is **incorect_capital_cities**
 
 
-## Python Comprehension can be also used for sets and dictionaries
+			![Code Snippet 5](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-5.png)
 
-Well, we don't have tuple comprehension because parenthesis is always used for generator expressions. But we do have Dictionary Comprehension and Set Comprehension.
 
-![Code Snippet 6](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-6.png)
+			As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
+			we have a list of lists, with each inner list representing a row in the matrix by the name of **nseted_list**.
 
+			The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.
 
-A dictionary is similar to a list but instead of using indexes we use keys to access the value.
+			- number ** 2 We find the square of the number
+			- **if sum(row) > 10** check if the sum of numbers in a row is greater than 10.
+			- **if number % 2 == 0** Check if the number is even.
 
-In this example, we have two lists. We will use these two lists to create a dictionary.
 
-We use the zip() function to combine the two lists into a list of tuples. Each tuple contains a book genre and how many books have been read in that genre. For each tuple in the list of tuples created by zip(), a key-value pair is added to the dictionary. The key is the book genre, and the value is the number of books read in that genre.
- 
+			## Python Comprehension can be also used for sets and dictionaries
 
-![Code Snippet 7](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-7.png)
+			Well, we don't have tuple comprehension because parenthesis is always used for generator expressions. But we do have Dictionary Comprehension and Set Comprehension.
 
+			![Code Snippet 6](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-6.png)
 
-Set is a built-in data structure in Python that represents an unordered collection of unique elements. In a set, the order of elements does not matter. Set id defined using curly braces {} or the built-in set() function.
 
-In this example, we have two set comprehensions. In the first one, we have a list of numbers [1,2,1,3] but we only want the unique numbers. It's very similar to list comprehension except that we use curly braces {}.
+			A dictionary is similar to a list but instead of using indexes we use keys to access the value.
 
-The second example has a string "hello world" and we want only the unique characters from the string. The rest of the code is very similar to our previous examples.
+			In this example, we have two lists. We will use these two lists to create a dictionary.
 
-This tutorial is about list comprehensions and not dictionary and set comprehensions. These examples are just a showcase that we can apply the same principles of comprehension to sets and dictionaries.
+			We use the zip() function to combine the two lists into a list of tuples. Each tuple contains a book genre and how many books have been read in that genre. For each tuple in the list of tuples created by zip(), a key-value pair is added to the dictionary. The key is the book genre, and the value is the number of books read in that genre.
+			 
 
+			![Code Snippet 7](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-7.png)
 
 
-## How to decide which tool to use
+			Set is a built-in data structure in Python that represents an unordered collection of unique elements. In a set, the order of elements does not matter. Set id defined using curly braces {} or the built-in set() function.
 
+			In this example, we have two set comprehensions. In the first one, we have a list of numbers [1,2,1,3] but we only want the unique numbers. It's very similar to list comprehension except that we use curly braces {}.
 
-You probably know that you can solve the examples I provided using map and lambda functions, with generators, and loops. Why even bother with list comprehensions?
+			The second example has a string "hello world" and we want only the unique characters from the string. The rest of the code is very similar to our previous examples.
 
-It comes down to a simple question. Is performance important to the problem you are trying to solve? If performance is not important then go for the cleanest code solution. In my opinion, most of the time list comprehension is the winner.
+			This tutorial is about list comprehensions and not dictionary and set comprehensions. These examples are just a showcase that we can apply the same principles of comprehension to sets and dictionaries.
 
-If performance is important then it's best to test different approaches and see which solution runs the fastest for the given problem.
 
-Python has provided us with a useful built-in Python module for measuring the execution time of small code snippets. It's called timeit.
 
+			## How to decide which tool to use
 
-![code time measuring 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-1.png)
 
+			You probably know that you can solve the examples I provided using map and lambda functions, with generators, and loops. Why even bother with list comprehensions?
 
-In the last example, we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.
+			It comes down to a simple question. Is performance important to the problem you are trying to solve? If performance is not important then go for the cleanest code solution. In my opinion, most of the time list comprehension is the winner.
 
-Code execution leaderboard:
+			If performance is important then it's best to test different approaches and see which solution runs the fastest for the given problem.
 
-1. Generator expression time: 0.037s
-2. List comprehension time: 0.359s
-3. For loop time: 0.370s
-4. Map and lambda time: 0.389s
+			Python has provided us with a useful built-in Python module for measuring the execution time of small code snippets. It's called timeit.
 
-You probably think that the difference is not that big between loops and list comprehension but keep in mind this is a small problem. When you are faced with a bigger problem the difference will increase.
 
-Let's test it out. Let's test it 100000000 million times and see the result.
+			![code time measuring 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-1.png)
 
 
-![code time measuring 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-2.png)
+			In the last example, we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.
 
+			Code execution leaderboard:
 
-In the second example, we put some iron in the oven. Just kidding. After the execution is done we can see that list comprehension is faster than a map and for loops.
+			1. Generator expression time: 0.037s
+			2. List comprehension time: 0.359s
+			3. For loop time: 0.370s
+			4. Map and lambda time: 0.389s
 
-To address the elephant in the room. Yes, Generator expressions are the fastest but this is not a tutorial about them so for now as one wise man once said just don't worry about generator expressions. For now...
+			You probably think that the difference is not that big between loops and list comprehension but keep in mind this is a small problem. When you are faced with a bigger problem the difference will increase.
 
-Rule of thumb if you work with huge datasets or on a mobile device with less power then just go with a generator expression.
+			Let's test it out. Let's test it 100000000 million times and see the result.
 
 
-## Conclusion
+			![code time measuring 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-2.png)
 
-In this tutorial, you learned how to use list comprehension in Python. Also, you have learned for yourself how to decide which list-building method is right for your problem. I hope that this tutorial is useful to you. Stay tuned for more.
 
-All the code snippets are screenshots, but you can find the code [here](https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/notebooks/Article%20on%20Python%20List%20Comprehension.ipynb). It's recommended that you type the code while reading the tutorial.
+			In the second example, we put some iron in the oven. Just kidding. After the execution is done we can see that list comprehension is faster than a map and for loops.
+
+			To address the elephant in the room. Yes, Generator expressions are the fastest but this is not a tutorial about them so for now as one wise man once said just don't worry about generator expressions. For now...
+
+			Rule of thumb if you work with huge datasets or on a mobile device with less power then just go with a generator expression.
+
+
+			## Conclusion
+
+			In this tutorial, you learned how to use list comprehension in Python. Also, you have learned for yourself how to decide which list-building method is right for your problem. I hope that this tutorial is useful to you. Stay tuned for more.
+
+			All the code snippets are screenshots, but you can find the code [here](https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/notebooks/Article%20on%20Python%20List%20Comprehension.ipynb). It's recommended that you type the code while reading the tutorial.
+
+			
+		</div>	
+		<!-- END CONTENT	 -->
+
+		<!-- START FOOTER -->
+		<div>FOOTER</div>
+		<!-- END FOOTER -->
+
+	</div>
+
+	<!-- START STYLE -->
+	<style type="text/css">
+
+		body {
+			font-family: 'Arial', sans-serif;
+		    font-size: 18px;
+		    line-height: 2;
+		    color: #333;
+			padding: 5px 10px;
+			margin: 50px auto;
+			max-width: 650px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+		    font-weight: bold;
+		    margin-top: 1.5em;
+		    margin-bottom: 0.5em;
+		}
+
+		p {
+		    margin-bottom: 1em;
+		}
+
+		.header { 
+			font-size: 22px; 
+			padding: 10px;
+		}
+
+		.header a {
+			text-decoration: none;
+			color: #4169e1;
+			font-weight: bold;
+		}
+
+		.header a:hover {
+			color: #7b96ea;
+		}
+
+	</style>
+	<!-- END STYLE -->
+
+</body>
+</html>
