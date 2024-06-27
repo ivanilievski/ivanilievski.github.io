@@ -3,6 +3,7 @@
 <head>
 	<title>Blog</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test</title>
 </head>
 <body>
 
@@ -10,14 +11,13 @@
 
 		<!-- START MENU -->
 		<div class="header">
-			<div class="connect">
-				<a href="https://twitter.com/IvanIlievski_">Twitter</a>
-			</div>
-			<div class="created">
-				Working on: <span><a href="https://indiestartuplist.com/">IndieStartupList</a></span>
-			</div>
+			<span>
+				<a target="_blank" href="https://twitter.com/IvanIlievski_">Twitter</a>
+			</span> | 
+			<span>
+				<a target="_blank" href="https://indiestartuplist.com/">IndieStartupList</a>
+			</span>
 		</div>
-
 		<!-- END MENU -->
 
 
@@ -84,9 +84,17 @@
 
 		.header { 
 			font-size: 22px; 
-			border: 1px solid black;
 			padding: 10px;
-			border-radius: 10px;
+		}
+
+		.header a {
+			text-decoration: none;
+			color: #4169e1;
+			font-weight: bold;
+		}
+
+		.header a:hover {
+			color: #7b96ea;
 		}
 
 	</style>

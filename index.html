@@ -3,26 +3,20 @@
 <head>
 	<title>Blog</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link
-  		rel="stylesheet"
-  		href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-	/>
 </head>
 <body>
 
-	<div class="wrapper">
+	<div class="container">
 
 		<!-- START MENU -->
 		<div class="header">
-			<div class="connect">
-				<a href="https://twitter.com/IvanIlievski_">Twitter</a>
-			</div>
-			<div class="created">
-				Working on: <span><a href="https://indiestartuplist.com/">IndieStartupList</a></span>
-			</div>
+			<span>
+				<a target="_blank" href="https://twitter.com/IvanIlievski_">Twitter</a>
+			</span> | 
+			<span>
+				<a target="_blank" href="https://indiestartuplist.com/">IndieStartupList</a>
+			</span>
 		</div>
-
 		<!-- END MENU -->
 
 
@@ -34,26 +28,52 @@
 
 		</div>
 
+		<!-- START FOOTER -->
+		<div>FOOTER</div>
+		<!-- END FOOTER -->
+
 	</div>
 
+	<!-- START STYLE -->
 	<style type="text/css">
-		
-		body{ font-family: sans-serif; } 
 
-		.wrapper{ margin: 0 auto; max-width: 730px; padding: 10px; display: flex; flex-direction: column; justify-content: flex-start;}
+		body {
+			font-family: 'Arial', sans-serif;
+		    font-size: 18px;
+		    line-height: 2;
+		    color: #333;
+			padding: 5px 10px;
+			margin: 50px auto;
+			max-width: 650px;
+		}
 
-		.info{ font-size: 22px; }
+		h1, h2, h3, h4, h5, h6 {
+		    font-weight: bold;
+		    margin-top: 1.5em;
+		    margin-bottom: 0.5em;
+		}
 
-		.post-list { display: flex; flex-direction: column; }
-		.post-year, h3{ font-size: 25px; font-weight: bold; margin: 20px 0;} 
-		.post-single{ display: inline-flex; align-items: center;}
-		.post-date, .post-link{ padding:10px 5px; }
-		.post-date{ width:10%; }
-		.post-link { width: 90%; margin-left: 25px; font-size: 20px;}
+		p {
+		    margin-bottom: 1em;
+		}
 
-		a{ color: blue; text-decoration: none; font-weight: bold; }
+		.header { 
+			font-size: 22px; 
+			padding: 10px;
+		}
+
+		.header a {
+			text-decoration: none;
+			color: #4169e1;
+			font-weight: bold;
+		}
+
+		.header a:hover {
+			color: #7b96ea;
+		}
 
 	</style>
+	<!-- END STYLE -->
 
 </body>
 </html>

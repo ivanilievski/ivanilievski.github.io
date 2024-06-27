@@ -1,43 +1,79 @@
-<style type="text/css">
-	body { margin: 0 auto; max-width: 730px; padding: 10px;}
-	p{ font-family: sans-serif; font-size: 20px; }
-	.post-list { display: flex; flex-direction: column; }
-	.post-year, h3{ font-size: 25px; font-weight: bold; margin: 20px 0;} 
-	.post-single{ display: inline-flex; align-items: center;}
-	.post-date, .post-link{ padding:10px 5px; }
-	.post-date{ width:10%; }
-	.post-link { width: 90%; margin-left: 25px; font-size: 20px;}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post Template</title>
+</head>
+<body>
+	<div class="container">
 
-	a{ color: blue; text-decoration: none; font-weight: bold; }
-	img{ width:100%; }
-
-</style>
-
-<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
-
-[<-- Home](https://ivanilievski.github.io)
-
-
+		<!-- START MENU -->
+		<div class="header">
+			<span>
+				<a target="_blank" href="https://twitter.com/IvanIlievski_">Twitter</a>
+			</span> | 
+			<span>
+				<a target="_blank" href="https://indiestartuplist.com/">IndieStartupList</a>
+			</span>
+		</div>
+		<!-- END MENU -->
 
 
-<hr>
+		<!-- START CONTENT -->
+		<div class="content">
 
-<div class="post-list">
+			<h2>Test Title</h2>
 
-	<div class="post-year">2023</div>
-	<div class="post-single">
-				
-		<div class="post-date">04 May</div>
-		<div class="post-link"><a href="./posts/01_04_05_2023_python_list_comprehension.html">Python List Comprehension</a></div>
-
-	</div>
+			<p>Test New Paragraph...</p>
 			
-	<div class="post-year">2022</div>
-	<div class="post-single">
-				
-		<div class="post-date">24 Nov</div>
-		<div class="post-link"><a href="./posts/00_22_11_2022_start_blog.html">The best blogging platform</a></div>
+		</div>	
+		<!-- END CONTENT	 -->
+
+		<!-- START FOOTER -->
+		<div>FOOTER</div>
+		<!-- END FOOTER -->
 
 	</div>
 
-</div>
+	<!-- START STYLE -->
+	<style type="text/css">
+
+		body {
+			font-family: 'Arial', sans-serif;
+		    font-size: 18px;
+		    line-height: 2;
+		    color: #333;
+			padding: 5px 10px;
+			margin: 50px auto;
+			max-width: 650px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+		    font-weight: bold;
+		    margin-top: 1.5em;
+		    margin-bottom: 0.5em;
+		}
+
+		p {
+		    margin-bottom: 1em;
+		}
+
+		.header { 
+			font-size: 22px; 
+			padding: 10px;
+		}
+
+		.header a {
+			text-decoration: none;
+			color: #4169e1;
+			font-weight: bold;
+		}
+
+		.header a:hover {
+			color: #7b96ea;
+		}
+
+	</style>
+	<!-- END STYLE -->
+
+</body>
+</html>
