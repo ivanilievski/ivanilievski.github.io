@@ -23,24 +23,102 @@
 		</div>
 		<!-- END MENU -->
 
-
-
-
-		<div class="post-list">
-
-			<div class="post-link"><a href="./posts/01_04_05_2023_python_list_comprehension.html">Python List Comprehension</a></div>
-			
-			<div class="post-link"><a href="./posts/00_22_11_2022_start_blog.html">The best blogging platform</a></div>
-
-		</div>
+		<!-- LIST OF CONTENT -->
+		<table>
+			<caption>
+    			List of Articles!
+  			</caption>
+			<thead>
+			    <tr>
+			      <th scope="col">Date</th>
+			      <th scope="col">Article</th>
+			    </tr>
+			</thead>
+			<tbody>
+				<tr>
+			      <th scope="row">04.05.2023</th>
+			      <td>
+			      	<a href="./posts/python_list_comprehension.html">Python List Comprehension</a>
+			      </td>
+			    </tr>
+			    <tr>
+			      <th scope="row">22.11.2022</th>
+			      <td>
+			      	<a href="./posts/best_blogging_platform.html">The Best Blogging Platform</a>
+			      </td>
+			    </tr>
+			</tbody>
+		</table>
+		<!-- END LIST OF CONTENT -->
 
 		<!-- START FOOTER -->
 		<footer>
-        	<p>&copy; 2024 Ivan. All rights reserved.</p>
+        	<p>&copy; 2024 Ivan Ilievski Blog. All rights reserved.</p>
     	</footer>
 		<!-- END FOOTER -->
 
 	</div>
+
+	<!-- ONLY index.html -->
+	<style type="text/css">
+
+		thead, caption, th{
+			display: none;
+		}
+
+		table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 20px;
+    min-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+th, td {
+    padding: 20px 0 20px 20px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #404040;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #404040;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+	</style>
 
 	<!-- START STYLE -->
 	<style type="text/css">
@@ -56,6 +134,7 @@
 			width: 650px;
 		}
 
+		
 		.content {
 			font-size: 18px;
 			line-height: 2;
