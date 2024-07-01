@@ -62,61 +62,59 @@
 	<!-- ONLY index.html -->
 	<style type="text/css">
 
-		thead, caption, th{
+		thead, caption, th {
 			display: none;
 		}
 
 		table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    text-decoration: none;
-    font-size: 20px;
-    min-width: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+			width: 100%;
+			border-collapse: collapse;
+			margin: 20px 0;
+			text-decoration: none;
+			font-size: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
 
-caption {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: left;
-    color: #333;
-}
+		caption {
+			margin-bottom: 10px;
+			font-size: 1.5em;
+			font-weight: bold;
+			text-align: left;
+			color: #333;
+		}
 
-th, td {
-    padding: 20px 0 20px 20px;
-    text-align: left;
-}
+		th, td {
+			padding: 20px 0 20px 20px;
+			text-align: left;
+		}
 
-thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-}
+		thead tr {
+			background-color: #009879;
+			color: #ffffff;
+			text-align: left;
+			font-weight: bold;
+		}
 
-tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
+		tbody tr {
+			border-bottom: 1px solid #dddddd;
+		}
 
-tbody tr:last-of-type {
-    border-bottom: 2px solid #404040;
-}
+		tbody tr:last-of-type {
+			border-bottom: 2px solid #404040;
+		}
 
-tbody tr:hover {
-    background-color: #f1f1f1;
-}
+		tbody tr:hover {
+		 *	 background-color: #f1f1f1;
+		}
 
-a {
-    text-decoration: none;
-    color: #404040;
-}
+		a {
+			text-decoration: none;
+			color: #404040;
+		}
 
-a:hover {
-    text-decoration: underline;
-}
-
+		a:hover {
+			text-decoration: underline;
+		}
 
 	</style>
 
@@ -125,29 +123,29 @@ a:hover {
 
 		body {
 			font-family: 'Helvetica', 'Arial', sans-serif;
-		    color: #333;
+			color: #333;
 			padding: 5px 10px;
 		}
 
 		.container {
 			margin: 30px auto;
-			width: 650px;
+			width: 90%;
+			max-width: 650px;
 		}
 
-		
 		.content {
 			font-size: 18px;
 			line-height: 2;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
-		    font-weight: bold;
-		    margin-top: 1.5em;
-		    margin-bottom: 0.5em;
+			font-weight: bold;
+			margin-top: 1.5em;
+			margin-bottom: 0.5em;
 		}
 
 		p {
-		    margin-bottom: 1em;
+			margin-bottom: 1em;
 		}
 
 		.header { 
@@ -163,6 +161,25 @@ a:hover {
 
 		.header a:hover {
 			color: #7b96ea;
+		}
+
+		/* Media query for mobile devices */
+		@media (max-width: 600px) {
+			body {
+				font-size: 14px;
+			}
+			.header {
+				font-size: 18px;
+			}
+			.content {
+				font-size: 16px;
+			}
+			table {
+				font-size: 18px;
+			}
+			th, td {
+				padding: 10px 0 10px 10px;
+			}
 		}
 
 	</style>
