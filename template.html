@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Post Template</title>
+	<title>Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -22,44 +23,76 @@
 		</div>
 		<!-- END MENU -->
 
-
-		<!-- START CONTENT -->
-		<div class="content">
-
-			<h2>Test Title</h2>
-
-			<p>Test New Paragraph...</p>
-			
-		</div>	
-		<!-- END CONTENT	 -->
+		<!-- LIST OF CONTENT -->
+		<table>
+			<caption>
+    			List of Articles!
+  			</caption>
+			<thead>
+			    <tr>
+			      <th scope="col">Date</th>
+			      <th scope="col">Article</th>
+			    </tr>
+			</thead>
+			<tbody>
+				<tr>
+			      <th scope="row">04.05.2023</th>
+			      <td>
+			      	<a href="./posts/python_list_comprehension.html">Python List Comprehension</a>
+			      </td>
+			    </tr>
+			    <tr>
+			      <th scope="row">22.11.2022</th>
+			      <td>
+			      	<a href="./posts/best_blogging_platform.html">The Best Blogging Platform</a>
+			      </td>
+			    </tr>
+			</tbody>
+		</table>
+		<!-- END LIST OF CONTENT -->
 
 		<!-- START FOOTER -->
-		<div>FOOTER</div>
+		<footer>
+        	<p>&copy; 2024 Ivan Ilievski Blog. All rights reserved.</p>
+    	</footer>
 		<!-- END FOOTER -->
 
 	</div>
+
+	<!-- ONLY article.html -->
+	<style type="text/css">
+
+		
+	</style>
 
 	<!-- START STYLE -->
 	<style type="text/css">
 
 		body {
-			font-family: 'Arial', sans-serif;
-		    font-size: 18px;
-		    line-height: 2;
-		    color: #333;
+			font-family: 'Helvetica', 'Arial', sans-serif;
+			color: #333;
 			padding: 5px 10px;
-			margin: 50px auto;
+		}
+
+		.container {
+			margin: 30px auto;
+			width: 90%;
 			max-width: 650px;
 		}
 
+		.content {
+			font-size: 18px;
+			line-height: 2;
+		}
+
 		h1, h2, h3, h4, h5, h6 {
-		    font-weight: bold;
-		    margin-top: 1.5em;
-		    margin-bottom: 0.5em;
+			font-weight: bold;
+			margin-top: 1.5em;
+			margin-bottom: 0.5em;
 		}
 
 		p {
-		    margin-bottom: 1em;
+			margin-bottom: 1em;
 		}
 
 		.header { 
@@ -75,6 +108,25 @@
 
 		.header a:hover {
 			color: #7b96ea;
+		}
+
+		/* Media query for mobile devices */
+		@media (max-width: 600px) {
+			body {
+				font-size: 14px;
+			}
+			.header {
+				font-size: 18px;
+			}
+			.content {
+				font-size: 16px;
+			}
+			table {
+				font-size: 18px;
+			}
+			th, td {
+				padding: 10px 0 10px 10px;
+			}
 		}
 
 	</style>
