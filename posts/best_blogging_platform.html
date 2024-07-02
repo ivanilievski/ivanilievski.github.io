@@ -26,11 +26,18 @@
 		<!-- START CONTENT -->
 		<div class="content">
 
-			<h1>The best blogging platform</h1>
+			<div class="title">
 
-			<p class="date">24.11.2022</p>
+				<h1>The best blogging platform</h1>
 
-			<p class="intro">I wanted to start a blog. For the longest time possible. After trying most of them, I just built a static index.html with a Markdown parser for the posts and hosted it on GitHub pages. Here is why.</p>
+				<p class="date">
+					<span>November 24, 2022</span>
+					<span>by Ivan Ilievski</span>
+				</p>
+				
+			</div>
+
+			<p class="paragraph">I wanted to start a blog. For the longest time possible. After trying most of them, I just built a static index.html with a Markdown parser for the posts and hosted it on GitHub pages. Here is why.</p>
 
 			<p class="paragraph">I like blogging. I find it interesting since I discovered blogging back in high school and after reading a few articles on blogging I thought I knew what is the best blogging platform. Well not so much, I remember it being undecided on WordPress, blogger, and Weebly. So I made one blog on each. The thing is they were easy to set up but limiting designs and if you wanted to customize the theme you needed to pay for it. Instead, I spent a lot of time looking for themes, which of course it was disappointing in the end because I could not find the right one. In the end, I deleted all three.</p>
 
@@ -38,7 +45,7 @@
 
 			<p class="paragraph">I was influenced by web developers, and they were all rocking the current thing. Or, at the time, it was Gatsby. I procrastinated on it, and I am glad I did. As it turns out, Gatsby was way easy to set up, but maintaining the blog was a pain in the ass. And many people will brag about how awesome the tech stack their blogs were, but then completely abandon their blogs. With few posts or fewer. (Most of them were straight empty.)</p>
 
-			<h4>Lifecycle of Gatsby JS blog:</h4>
+			<h3>Lifecycle of Gatsby JS blog:</h3>
 
 			<img src="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/zero/gatsbyjs_part_1.png?raw=true"/>
 
@@ -80,7 +87,7 @@
 
 		body {
 			font-family: 'Helvetica', 'Arial', sans-serif;
-			color: #333;
+			color: #404040;
 			padding: 5px 10px;
 		}
 
@@ -88,39 +95,6 @@
 			margin: 30px auto;
 			width: 90%;
 			max-width: 650px;
-		}
-
-		.content {
-			font-size: 18px;
-			line-height: 1.8;
-		}
-
-		.date {
-			font-style: italic;
-			color: #666;
-			margin-bottom: 1.5em;
-			text-align: right;
-		}
-
-		.intro {
-			font-size: 20px;
-			font-weight: bold;
-			margin-bottom: 1.5em;
-		}
-
-		.paragraph {
-			margin-bottom: 1.5em;
-			text-indent: 1em;
-		}
-
-		h1, h2, h3, h4, h5, h6 {
-			font-weight: bold;
-			margin-top: 1.5em;
-			margin-bottom: 0.5em;
-		}
-
-		h1 {
-			text-align: center;
 		}
 
 		.header { 
@@ -137,6 +111,45 @@
 		.header a:hover {
 			color: #7b96ea;
 		}
+
+		.content {
+			font-size: 18px;
+			line-height: 1.8;
+			border-bottom: 2px solid #404040;
+		}
+
+		.title {
+			margin-bottom: 1.5em;
+		}
+
+		.title h1 {
+			font-size: 36px;
+			letter-spacing: -1.5px;
+			line-height: 1;
+			font-weight: 300;
+			margin-bottom: 0px;
+		}
+
+		.date {
+			font-style: italic;
+			color: #a0a0a0;
+			margin: 0;
+		}
+
+		.paragraph {
+			margin-bottom: 1.5em;
+			text-indent: 1em;
+		}
+
+		/*h1, h2, h3, h4, h5, h6 {
+			font-weight: bold;
+			margin-top: 1.5em;
+			margin-bottom: 0.5em;
+		}*/
+
+		/*h1 {
+			text-align: center;
+		}*/
 
 		img {
 			width: 100%;
