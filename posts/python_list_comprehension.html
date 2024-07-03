@@ -37,9 +37,9 @@
 				
 			</div>
 
-			<p class="paragraph">List Comprehension is a powerful feature of Python for creating new lists based on existing lists in a more expressive way. It can help you write code that is easier to read and maintain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.</p>
+			<p class="paragraph">List Comprehension is a powerful feature of Python for creating new lists based on existing lists in a more expressive way. It can help you write code that is easier to read and maintain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.
 
-			List comprehension is based on a simple syntax that consists of three parts:
+			<p>List comprehension is based on a simple syntax that consists of three parts:</p>
 			<ul>
 				<li>an expression</li>
 				<li>a variable</li>
@@ -65,7 +65,7 @@
 
 			<p class="paragraph">In the first example, we initialize an empty list called <b>number_list</b>. Then the for loop is created using the function <b>range()</b>. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.</p>
 
-			<p class="paragraph">Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:</p>
+			<p>Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:</p>
 
 			<ul>
 				<li><b>expression</b>. In this case, we just have <b>a number</b> but it can have more complex expressions as we will see later.</li>
@@ -80,7 +80,7 @@
 
 			<p class="paragraph">But we can do way more than just a single number in the expression. In the second example, we are calculating the square of 10 numbers in the list named <b>old_number_list</b>, so we write a simple calculation in the expression using the <b>**</b> operator. The rest of the code is concise and simple.</p>
 
-			<p class="paragraph">Again we can recognize the three parts:</p>
+			<p>Again we can recognize the three parts:</p>
 
 			<ul>
 				<li><b>number ** 2</b>  is the <b>expression</b>. Find the square of the number.</li>
@@ -97,7 +97,7 @@
 
 			<p class="paragraph">Let's try list comprehension with strings. Some little kid messed with our list and now our list of capital cities is not properly written. We don't have time to rewrite each capital city from scratch so we used list comprehension to capitalize our capital city names.</p>
 
-			Nothing changed we still have the same organization:
+			<p>Nothing changed we still have the same organization:</p>
 
 			<ul>
 				<li><b>expression</b> is <b>city.capitalize()</b></li>
@@ -110,7 +110,7 @@
 			<p class="paragraph">As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
 			we have a list of lists, with each inner list representing a row in the matrix by the name of <b>nseted_list</b>.</p>
 
-			<p class="paragraph">The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.</p>
+			<p>The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.</p>
 
 			<ul>
 				<li>number <b>**</b> 2 We find the square of the number</li>
@@ -156,7 +156,7 @@
 
 			<p class="paragraph">In the last example, we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.</p>
 
-			Code execution leaderboard:
+			<p>Code execution leaderboard:</p>
 
 			<ul>
 				<li>Generator expression time: 0.037s</li>
