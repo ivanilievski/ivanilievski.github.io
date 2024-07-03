@@ -26,212 +26,220 @@
 		<!-- START CONTENT -->
 		<div class="content">
 
-			<h1>Python List Comprehension</h1>
+			<div class="title">
 
-			<p>04.05.2023</p>
+				<h1>Python List Comprehension</h1>
 
-			<p>List Comprehension is a powerful feature of Python for creating new lists based on existing lists in a more expressive way. It can help you write code that is easier to read and maintain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.</p>
+				<p class="date">
+					<span>May 04, 2023</span>
+					<span>by Ivan Ilievski</span>
+				</p>
+				
+			</div>
 
-			<p>List comprehension is based on a simple syntax that consists of three parts:
+			<p class="paragraph">List Comprehension is a powerful feature of Python for creating new lists based on existing lists in a more expressive way. It can help you write code that is easier to read and maintain, but also it will reduce the amount of code that you write. Plus, compared to normal functions and loops, list comprehension is faster for creating lists.</p>
 
-			1. an expression
-			2. a variable
-			3. a list </p>
+			List comprehension is based on a simple syntax that consists of three parts:
+			<ul>
+				<li>an expression</li>
+				<li>a variable</li>
+				<li>a list</li>
+			</ul>
+	
+			<blockquote>
+				<code>new_list = [expression for variable in original_list]</code>
+			</blockquote>
+			
+			<p class="paragraph">The <b>expression</b> defines the operation to be performed on each element of the list, the <b>variable</b> represents the current element being operated on, and the <b>list</b> is the original list that is being transformed.
+			That being said there is an optional fourth part that can be extremely useful when we want to filter elements. We use <b>conditions</b> to decide which elements to be included in the new list. If the condition is not used, all elements will be included.</p>
 
-			```
-			new_list = [expression for variable in original_list]
-			```
+			<blockquote>
+				<code>new_list = [expression for variable in original_list if condition]</code>
+			</blockquote>
 
-			The **expression** defines the operation to be performed on each element of the list, the **variable** represents the current element being operated on, and the **list** is the original list that is being transformed.
-			That being said there is an optional fourth part that can be extremely useful when we want to filter elements. We use **conditions** to decide which elements to be included in the new list. If the condition is not used, all elements will be included.
+			<h3>List Comprehension in practice</h3>
 
-			```
-			new_list = [expression for variable in original_list if condition]
-			```
+			<p class="paragraph">Ok. So enough about theory, let's put our knowledge into practice. Writing your first list comprehension is very easy but to appreciate what list comprehension does for us we will write two versions to accomplish the same thing. One version with loops and functions and one with a list comprehension.</p>
 
-			## List Comprehension in practice
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-1.png"/>
 
-			Ok. So enough about theory, let's put our knowledge into practice. Writing your first list comprehension is very easy but to appreciate what list comprehension does for us we will write two versions to accomplish the same thing. One version with loops and functions and one with a list comprehension.
+			<p class="paragraph">In the first example, we initialize an empty list called <b>number_list</b>. Then the for loop is created using the function <b>range()</b>. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.</p>
 
+			<p class="paragraph">Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:</p>
 
-			![Code Snippet 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-1.png)
+			<ul>
+				<li><b>expression</b>. In this case, we just have <b>a number</b> but it can have more complex expressions as we will see later.</li>
+				<li><b>the variable</b> is <b>number</b>. I know is a little bit confusing but in the next example, it will be much more clear.</li>
+				<li>We can see that the third part is not <b>list</b> as we specified earlier. But we just generate a sequence of numbers we use to make our list. Yes, so the third part of the list comprehension can be many different things. Like list, set, sequence, generator, etc.</li>
+			</ul>
+			
 
+			<p class="paragraph">Rather than creating an empty list and adding each element to the end, you simply define the list and its contents at the same time. One of the many benefits of using list comprehensions. We did not use <b>the append</b> method and yet the numbers were pushed to the new list.</p>
 
-			In the first example, we initialize an empty list called **number_list**. Then the for loop is created using the function **range()**. This function generates a sequence of numbers from 0 to 4. During each iteration of the loop, the current number is added to the empty list.
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-2.png"/>
 
-			Now let's look at the same problem solved by List Comprehension. Every list comprehension in Python must have the three elements we talked about before:
+			<p class="paragraph">But we can do way more than just a single number in the expression. In the second example, we are calculating the square of 10 numbers in the list named <b>old_number_list</b>, so we write a simple calculation in the expression using the <b>**</b> operator. The rest of the code is concise and simple.</p>
 
-			1. **expression**. In this case, we just have **a number** but it can have more complex expressions as we will see later.
+			<p class="paragraph">Again we can recognize the three parts:</p>
 
-			2. **the variable** is **number**. I know is a little bit confusing but in the next example, it will be much more clear.
+			<ul>
+				<li><b>number ** 2</b>  is the <b>expression</b>. Find the square of the number.</li>
+				<li><b>variable</b> again is <b>a number</b>. Now, you get that expression and variable are different in the first example they were the same. But usually, they are not.</li>
+				<li>We iterate over the <b>list</b> named <b>old_number_list</b> to find the square of each element in the list.</li>
+			</ul>
 
-			3. We can see that the third part is not **list** as we specified earlier. But we just generate a sequence of numbers we use to make our list. Yes, so the third part of the list comprehension can be many different things. Like list, set, sequence, generator, etc.
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-3.png"/>
 
-			Rather than creating an empty list and adding each element to the end, you simply define the list and its contents at the same time. One of the many benefits of using list comprehensions. We did not use **the append** method and yet the numbers were pushed to the new list.
+			<p class="paragraph">The third example is similar to the second except that we use the optional condition so we are creating a list of squared numbers but only even numbers.
+			This list comprehension includes three elements plus the fort part or the <b>condition</b>, in this case, is <b>if number % 2 == 0</b> and we use it to filter the odd numbers and only add the even numbers to the list called <b>even_squared_numbers</b>.</p>
 
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-4.png"/>
 
-			![Code Snippet 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-2.png)
-
-
-			But we can do way more than just a single number in the expression. In the second example, we are calculating the square of 10 numbers in the list named **old_number_list**, so we write a simple calculation in the expression using the ** operator. The rest of the code is concise and simple.
-
-			Again we can recognize the three parts:
-
-			1. number ** 2  is the **expression**. Find the square of the number.
-			2. **variable** again is **a number**. Now, you get that expression and variable are different in the first example they were the same. But usually, they are not.
-			3. We iterate over the **list** named **old_number_list** to find the square of each element in the list.
-
-
-			![Code Snippet 3](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-3.png)
-
-
-			The third example is similar to the second except that we use the optional condition so we are creating a list of squared numbers but only even numbers.
-			This list comprehension includes three elements plus the fort part or the **condition**, in this case, is **if number % 2 == 0** and we use it to filter the odd numbers and only add the even numbers to the list called **even_squared_numbers**.
-
-
-			![Code Snippet 4](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-4.png)
-
-
-			Let's try list comprehension with strings. Some little kid messed with our list and now our list of capital cities is not properly written. We don't have time to rewrite each capital city from scratch so we used list comprehension to capitalize our capital city names.
+			<p class="paragraph">Let's try list comprehension with strings. Some little kid messed with our list and now our list of capital cities is not properly written. We don't have time to rewrite each capital city from scratch so we used list comprehension to capitalize our capital city names.</p>
 
 			Nothing changed we still have the same organization:
 
-			1. **expression** is **city.capitalize()**
-			2. **variable** is **city**
-			3. The **list** we iterate over is **incorect_capital_cities**
+			<ul>
+				<li><b>expression</b> is <b>city.capitalize()</b></li>
+				<li><b>variable</b> is <b>city</b></li>
+				<li>The <b>list</b> we iterate over is <b>incorect_capital_cities</b></li>
+			</ul>
 
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-5.png"/>
 
-			![Code Snippet 5](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-5.png)
+			<p class="paragraph">As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
+			we have a list of lists, with each inner list representing a row in the matrix by the name of <b>nseted_list</b>.</p>
 
+			<p class="paragraph">The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.</p>
 
-			As the examples go bigger we are starting to see the benefits we get from list comprehensions. In this example
-			we have a list of lists, with each inner list representing a row in the matrix by the name of **nseted_list**.
+			<ul>
+				<li>number <b>**</b> 2 We find the square of the number</li>
+				<li><b>if sum(row) > 10</b> check if the sum of numbers in a row is greater than 10.</li>
+				<li><b>if number % 2 == 0</b> Check if the number is even.</li>
+			</ul>
 
-			The list comprehension is used to flatten the nested_list and return a list of even numbers that are squared, but only if the sum of the numbers in the current row is greater than 10.
+			<h3>Python Comprehension can be also used for sets and dictionaries</h3>	
 
-			- number ** 2 We find the square of the number
-			- **if sum(row) > 10** check if the sum of numbers in a row is greater than 10.
-			- **if number % 2 == 0** Check if the number is even.
+			<p class="paragraph">Well, we don't have tuple comprehension because parenthesis is always used for generator expressions. But we do have Dictionary Comprehension and Set Comprehension.</p>
 
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-6.png"/>
 
-			## Python Comprehension can be also used for sets and dictionaries
+			<p class="paragraph">A dictionary is similar to a list but instead of using indexes we use keys to access the value.</p>
 
-			Well, we don't have tuple comprehension because parenthesis is always used for generator expressions. But we do have Dictionary Comprehension and Set Comprehension.
+			<p class="paragraph">In this example, we have two lists. We will use these two lists to create a dictionary.</p>
 
-			![Code Snippet 6](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-6.png)
-
-
-			A dictionary is similar to a list but instead of using indexes we use keys to access the value.
-
-			In this example, we have two lists. We will use these two lists to create a dictionary.
-
-			We use the zip() function to combine the two lists into a list of tuples. Each tuple contains a book genre and how many books have been read in that genre. For each tuple in the list of tuples created by zip(), a key-value pair is added to the dictionary. The key is the book genre, and the value is the number of books read in that genre.
+			<p class="paragraph">We use the zip() function to combine the two lists into a list of tuples. Each tuple contains a book genre and how many books have been read in that genre. For each tuple in the list of tuples created by zip(), a key-value pair is added to the dictionary. The key is the book genre, and the value is the number of books read in that genre.</p>
 			 
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-7.png"/>
 
-			![Code Snippet 7](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-snippet-7.png)
+			<p class="paragraph">Set is a built-in data structure in Python that represents an unordered collection of unique elements. In a set, the order of elements does not matter. Set id defined using curly braces {} or the built-in set() function.</p>
 
+			<p class="paragraph">In this example, we have two set comprehensions. In the first one, we have a list of numbers [1,2,1,3] but we only want the unique numbers. It's very similar to list comprehension except that we use curly braces {}.</p>
 
-			Set is a built-in data structure in Python that represents an unordered collection of unique elements. In a set, the order of elements does not matter. Set id defined using curly braces {} or the built-in set() function.
+			<p class="paragraph">The second example has a string "hello world" and we want only the unique characters from the string. The rest of the code is very similar to our previous examples.</p>
 
-			In this example, we have two set comprehensions. In the first one, we have a list of numbers [1,2,1,3] but we only want the unique numbers. It's very similar to list comprehension except that we use curly braces {}.
-
-			The second example has a string "hello world" and we want only the unique characters from the string. The rest of the code is very similar to our previous examples.
-
-			This tutorial is about list comprehensions and not dictionary and set comprehensions. These examples are just a showcase that we can apply the same principles of comprehension to sets and dictionaries.
+			<p class="paragraph">This tutorial is about list comprehensions and not dictionary and set comprehensions. These examples are just a showcase that we can apply the same principles of comprehension to sets and dictionaries.</p>
 
 
-
-			## How to decide which tool to use
-
-
-			You probably know that you can solve the examples I provided using map and lambda functions, with generators, and loops. Why even bother with list comprehensions?
-
-			It comes down to a simple question. Is performance important to the problem you are trying to solve? If performance is not important then go for the cleanest code solution. In my opinion, most of the time list comprehension is the winner.
-
-			If performance is important then it's best to test different approaches and see which solution runs the fastest for the given problem.
-
-			Python has provided us with a useful built-in Python module for measuring the execution time of small code snippets. It's called timeit.
+			<h3>How to decide which tool to use</h3>
 
 
-			![code time measuring 1](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-1.png)
+			<p class="paragraph">You probably know that you can solve the examples I provided using map and lambda functions, with generators, and loops. Why even bother with list comprehensions?</p>
 
+			<p class="paragraph">It comes down to a simple question. Is performance important to the problem you are trying to solve? If performance is not important then go for the cleanest code solution. In my opinion, most of the time list comprehension is the winner.</p>
 
-			In the last example, we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.
+			<p class="paragraph">If performance is important then it's best to test different approaches and see which solution runs the fastest for the given problem.</p>
+
+			<p class="paragraph">Python has provided us with a useful built-in Python module for measuring the execution time of small code snippets. It's called timeit.</p>
+
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-1.png"/>
+
+			<p class="paragraph">In the last example, we take the problem of finding the square of a number and we run it 100000 times inside the timeit function. So the result is showing that the generator expression is the fastest. Let's make a leaderboard.</p>
 
 			Code execution leaderboard:
 
-			1. Generator expression time: 0.037s
-			2. List comprehension time: 0.359s
-			3. For loop time: 0.370s
-			4. Map and lambda time: 0.389s
+			<ul>
+				<li>Generator expression time: 0.037s</li>
+				<li>List comprehension time: 0.359s</li>
+				<li>For loop time: 0.370s</li>
+				<li>Map and lambda time: 0.389s</li>
+			</ul>
 
-			You probably think that the difference is not that big between loops and list comprehension but keep in mind this is a small problem. When you are faced with a bigger problem the difference will increase.
+			<p class="paragraph">You probably think that the difference is not that big between loops and list comprehension but keep in mind this is a small problem. When you are faced with a bigger problem the difference will increase.</p>
 
-			Let's test it out. Let's test it 100000000 million times and see the result.
+			<p class="paragraph">Let's test it out. Let's test it 100000000 million times and see the result.</p>
 
+			<img src="https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-2.png"/>
 
-			![code time measuring 2](https://raw.githubusercontent.com/ivanilievski/ivanilievski.github.io/main/assets/one/code-test-2.png)
+			<p class="paragraph">In the second example, we put some iron in the oven. Just kidding. After the execution is done we can see that list comprehension is faster than a map and for loops.
 
+			<p class="paragraph">To address the elephant in the room. Yes, Generator expressions are the fastest but this is not a tutorial about them so for now as one wise man once said just don't worry about generator expressions. For now...
 
-			In the second example, we put some iron in the oven. Just kidding. After the execution is done we can see that list comprehension is faster than a map and for loops.
-
-			To address the elephant in the room. Yes, Generator expressions are the fastest but this is not a tutorial about them so for now as one wise man once said just don't worry about generator expressions. For now...
-
-			Rule of thumb if you work with huge datasets or on a mobile device with less power then just go with a generator expression.
+			<p class="paragraph">Rule of thumb if you work with huge datasets or on a mobile device with less power then just go with a generator expression.
 
 
-			## Conclusion
+			<h3>Conclusion</h3>
 
-			In this tutorial, you learned how to use list comprehension in Python. Also, you have learned for yourself how to decide which list-building method is right for your problem. I hope that this tutorial is useful to you. Stay tuned for more.
+			<p class="paragraph">In this tutorial, you learned how to use list comprehension in Python. Also, you have learned for yourself how to decide which list-building method is right for your problem. I hope that this tutorial is useful to you. Stay tuned for more.</p>
 
-			All the code snippets are screenshots, but you can find the code [here](https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/notebooks/Article%20on%20Python%20List%20Comprehension.ipynb). It's recommended that you type the code while reading the tutorial.
-
-			<h1>The best blogging platform</h1>
-
-			<p>24.11.2022</p>
-
-			<p>I wanted to start a blog. For the longest time possible. After trying most of them, I just built a static index.html with a Markdown parser for the posts and hosted it on GitHub pages. Here is why.</p>
-
-			<p>I like blogging. I find it interesting since I discovered blogging back in high school and after reading a few articles on blogging I thought I knew what is the best blogging platform. Well not so much, I remember it being undecided on WordPress, blogger, and Weebly. So I made one blog on each. The thing is they were easy to set up but limiting designs and if you wanted to customize the theme you needed to pay for it. Instead, I spent a lot of time looking for themes, which of course it was disappointing in the end because I could not find the right one. In the end, I deleted all three.</p>
-
-			<p>Then I went a professional blogger for like 6 months and made a medium and WordPress blog. Which I deleted as well. What I didn't like about medium. A lot of people become blogging influencers and spend all their time pumping up content. And it felt like I am chasing to read everything they post, which is hard because you can't spend your entire life reading blog posts. The FOMO was at an all-time high. But when you look back, you realize you were not missing anything, and you just spent time-consuming content which could have been spent reading books or just working. You are not going to build a work ethic like Elon Musk by reading blog posts on how to build a work ethic like Elon Musk, instead try working for a change.</p>
-
-			<p>I was influenced by web developers, and they were all rocking the current thing. Or, at the time, it was Gatsby. I procrastinated on it, and I am glad I did. As it turns out, Gatsby was way easy to set up, but maintaining the blog was a pain in the ass. And many people will brag about how awesome the tech stack their blogs were, but then completely abandon their blogs. With few posts or fewer. (Most of them were straight empty.)</p>
-
-			<h4>Lifecycle of Gatsby JS blog:</h4>
-
-			<img src="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/zero/gatsbyjs_part_1.png?raw=true"/>
-
-			<img src="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/zero/gatsbyjs_part_2.png?raw=true"/>
-
-			<img src="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/zero/gatsbyjs_part_3.png?raw=true"/>
-
-			<img src="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/zero/gatsbyjs_part_4.png?raw=true"/>
-
-			<p>In the meantime, I realized how practical was Paul Graham's blog. The essay part was just a list of links, and the other part was just simple text. And what do you need more? He has written some classics worth rereading like 100 times. Then I saw what levels did, which was similar but included some screenshots. It inspired me to make something similar.</p>
-
-			<p>GitHub Pages and Jekyll, plus a beautiful minimalist theme for Jekyll. Immediately I saw the potential of GitHub pages for hosting a blog and portfolio. The problem was the setup. I had to deal with bundlers, which I think is an unnecessary part of the blogging journey. I could use a template, but then I had to admit I could not figure out the bundlers. My ego was not letting me have it easy. But after struggling with bundlers, I decided for fun to recreate the home page of the theme I have chosen. It was so easy and fast, without setups that are hard to maintain. The home page of this blog is just 50 HTML lines and a few CSS. It was easier to write it from scratch than to set it up.</p>
-
-			<p>But then, how do I write posts? I don't want to write the blog post inside the p tag. I solved this by using [markdown parser](https://github.com/oscarmorrison/md-page) that I include on top of my post page. So right now I am inside Sublime text editor editing markdown which is very easy, and I can just post to my blog with a commit. The beauty in this is this post is going to sit down as a draft on my laptop as long as it needs to be and when it's ready I will just push it to the repository of my blog.<p>
-
-			<img src="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/zero/part%205.png?raw=true"/>
-
-			<p>The entire post page is just markdown parsed to look good. I can abandon my blog for a year and when I come back I can just continue where I stopped. I will not waste time updating anything because there is nothing to update. It just works. I think in a way I hacked blogging. This is the way.</p> 
-	
-		</div>	
-		<!-- END CONTENT	 -->
-
-		<!-- START FOOTER -->
-		<footer>
-        	<p>&copy; 2024 Ivan Ilievski Blog. All rights reserved.</p>
-    	</footer>
-		<!-- END FOOTER -->
+			<p class="paragraph">All the code snippets are screenshots, but you can find the code <a href="https://github.com/ivanilievski/ivanilievski.github.io/blob/main/assets/notebooks/Article%20on%20Python%20List%20Comprehension.ipynb">here</a>. It's recommended that you type the code while reading the tutorial.</p>
 
 	</div>
+
+	<!-- START FOOTER -->
+	<footer>
+    	<p>&copy; 2024 Ivan Ilievski Blog. All rights reserved.</p>
+	</footer>
+	<!-- END FOOTER -->
 
 	<!-- ONLY article.html -->
 	<style type="text/css">
 
+		.content {
+			font-size: 18px;
+			line-height: 1.8;
+			border-bottom: 2px solid #404040;
+		}
+
+		.title {
+			margin-bottom: 1.5em;
+		}
+
+		.title h1 {
+			font-size: 36px;
+			letter-spacing: -1.5px;
+			line-height: 1;
+			font-weight: 300;
+			margin-bottom: 0px;
+		}
+
+		.date {
+			font-style: italic;
+			color: #a0a0a0;
+			margin: 0;
+		}
+
+		.paragraph {
+			margin-bottom: 1.5em;
+			text-indent: 1em;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		/* Media query for mobile devices */
+		@media (max-width: 600px) {
+	
+			.content {
+				font-size: 16px;
+			}
+
+			h1 {
+				font-size: 20px;
+			}
+		}
 		
 	</style>
 
@@ -240,7 +248,7 @@
 
 		body {
 			font-family: 'Helvetica', 'Arial', sans-serif;
-			color: #333;
+			color: #404040;
 			padding: 5px 10px;
 		}
 
@@ -248,31 +256,6 @@
 			margin: 30px auto;
 			width: 90%;
 			max-width: 650px;
-		}
-
-		.content {
-			font-size: 18px;
-			line-height: 2;
-		}
-
-		img {
-		    width: 100%;
-		    height: auto;
-		}
-
-
-		h1, h2, h3, h4, h5, h6 {
-			font-weight: bold;
-			margin-top: 1.5em;
-			margin-bottom: 0.5em;
-		}
-
-		h1 {
-			text-align: center;
-		}
-
-		p {
-			margin-bottom: 1em;
 		}
 
 		.header { 
@@ -294,6 +277,7 @@
 		@media (max-width: 600px) {
 			body {
 				font-size: 14px;
+				padding: 0 0;
 			}
 
 			.container {
@@ -310,13 +294,6 @@
 
 			h1 {
 				font-size: 20px;
-			}
-
-			table {
-				font-size: 18px;
-			}
-			th, td {
-				padding: 10px 0 10px 10px;
 			}
 		}
 
